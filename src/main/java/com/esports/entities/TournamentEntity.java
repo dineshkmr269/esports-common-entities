@@ -25,7 +25,8 @@ public class TournamentEntity extends ParentEntity  {
 	private String description;
 	private String iconUrl;
 	private long esportId;
-	
+	private Date startTime;
+	private Date endTime;
 	public TournamentEntity(TournamentRequestBean tournamentRequestBean) {
 		this.name = tournamentRequestBean.getName();
 		this.description= tournamentRequestBean.getDescription();
@@ -33,6 +34,8 @@ public class TournamentEntity extends ParentEntity  {
 		this.shortName =  tournamentRequestBean.getShortName();
 		this.iconUrl =  tournamentRequestBean.getIconUrl();
 		this.esportId = tournamentRequestBean.getEsportId();
+		this.startTime = new Date(tournamentRequestBean.getStartTime());
+		this.endTime = new Date(tournamentRequestBean.getEndTime());
 	}
 
 	@PrePersist

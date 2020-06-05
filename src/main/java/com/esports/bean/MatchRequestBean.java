@@ -16,5 +16,8 @@ public class MatchRequestBean {
 	private String shortName;
 	private List<Long> teams;
 	private List<Long> contests;
-	
+	private List<Long> tournaments;
+	private double totalCredits;
+	private int days;
+	private int weeks;
 }

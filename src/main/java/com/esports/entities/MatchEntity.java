@@ -27,6 +27,9 @@ public class MatchEntity extends ParentEntity  {
 	private String matchMap;
 	private Date startTime;
 	private Date endTime;
+	private Long tournamentId;
+	private double credits;
+	
 	@OneToMany(mappedBy = "match",
         cascade = CascadeType.ALL,
         orphanRemoval = true)
@@ -42,7 +45,9 @@ public class MatchEntity extends ParentEntity  {
 		this.matchNumber =matchRequestBean.getMatchNumber();
 		this.matchMap = matchRequestBean.getMatchMap();
 		this.startTime = new Date(matchRequestBean.getStartTime());
-		this.endTime = new Date(matchRequestBean.getEndTime());		
+		this.endTime = new Date(matchRequestBean.getEndTime());	
+		this.tournamentId = matchRequestBean.getTournaments().get(0);
+		this.credits = matchRequestBean.getTotalCredits();
 	}
 
 	@PrePersist

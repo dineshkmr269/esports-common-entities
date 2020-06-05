@@ -18,4 +18,6 @@ public class TournamentRequestBean {
 	private String iconUrl;
 	@NotNull
 	private Long esportId;
+	private Long startTime;
+	private Long endTime;
 }

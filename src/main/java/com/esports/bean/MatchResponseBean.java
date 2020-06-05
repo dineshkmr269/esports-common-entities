@@ -21,4 +21,5 @@ public class MatchResponseBean extends ResponseBean {
 	private String name;
 	private String iconUrl;
 	private List<String> teamNames;
+	private String tournamentName;
 }
