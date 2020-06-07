@@ -25,11 +25,11 @@ public class ContestRankEntity extends ParentEntity  {
 	private static final long serialVersionUID = 29085L;	
 	@OneToOne
 	private ContestEntity contestEntity;
-	private int rank;
+	private int ranks;
 	private double prize;
 	
 	public ContestRankEntity(int rank, double prize) {
-		this.rank = rank;
+		this.ranks = rank;
 		this.prize = prize;
 	}
 
